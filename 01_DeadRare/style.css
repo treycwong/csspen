@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%; /* 1 rem = 10px */
+}
+
+body {
+    font-family: sans-serif !important;
+    background-color: #1A1A1A;
+    color: #E6E6E6;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+/* Convert px to vh/vw: https://khaledkzy.github.io/pixel-vh-vw-converter/ */
+.container {
+    width: 80vw;
+    margin-inline: auto;
+    padding-top: 10rem;
+}
+
+.heading {
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: #262626;
+    border: 1px solid #4D4D4D;
+    border-radius: 1.2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
+
+.card:hover {
+    transform: translate3d(0px, -1px, 0px); /* Elevate */
+    box-shadow: 0px 4px 6px rgba(68, 68, 68, 0.15),
+                0px 8px 12px rgba(68, 68, 68, 0.15);
+}
+
+.card__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.card__img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.card__content {
+    padding: 2rem;
+}
+
+.card__title {
+    line-height: 2.7rem;
+}
+
+.card__text {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 2; 
+   -webkit-box-orient: vertical;
+   line-height: 2.1rem;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .card__grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .card {
+        display: flex;
+        height: 25vh;
+    }
+    .card__img {
+        width: 40%;
+    }
+    .card__content {
+        width: 60%;
+    }
+}
+
+@media(max-width: 375px) {
+    .card {
+        height: 14vh;
+    }
+    .card:hover {
+        box-shadow: 0px 2px 4px rgba(68, 68, 68, 0.15),
+                    0px 4px 8px rgba(68, 68, 68, 0.15);
+    }
+    .card__img {
+        width: 40%;
+    }
+    .card__content {
+        width: 60%;
+        padding: 1.8rem;
+    }
+    .card__title {
+        font-size: 1.8rem;
+    }
+}
