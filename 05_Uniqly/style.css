@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%; /* 1 rem = 10px */
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #202037;
+    color: #fff;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Poppins", sans-serif;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+/* Convert px to vh/vw: https://khaledkzy.github.io/pixel-vh-vw-converter/ */
+.container {
+    width: 80vw;
+    margin-inline: auto;
+    padding-top: 10rem;
+}
+
+.heading {
+    margin-bottom: 2rem;
+}
+
+.card {
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+    position: relative;
+}
+
+.card__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3.2rem;
+}
+
+.card__img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.card__content {
+    padding: 1.6rem 0rem;
+}
+
+.card__title {
+    line-height: 2.7rem;
+}
+
+.card__text {
+    padding: 1.6rem 0;
+    line-height: 1.7rem;
+}
+
+.social-icon img {
+    position: absolute;
+    width: 1.6rem;
+    bottom: 0;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .card__grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .card {
+        display: flex;
+        height: 25vh;
+    }
+    .card__img {
+        width: 40%;
+    }
+    .card__content {
+        width: 60%;
+    }
+}
+
+@media(max-width: 375px) {
+    .card {
+        height: 14vh;
+    }
+    .card:hover {
+        box-shadow: 0px 2px 4px rgba(68, 68, 68, 0.15),
+                    0px 4px 8px rgba(68, 68, 68, 0.15);
+    }
+    .card__img {
+        width: 40%;
+    }
+    .card__content {
+        width: 60%;
+        padding: 1.8rem;
+    }
+    .card__title {
+        font-size: 1.8rem;
+    }
+}
