@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #fff;
+    color: #4A4A4A;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    color: #000;
+    line-height: 1.4;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+p.feature-text {
+    font-size: 20px;
+}
+
+.container {
+    max-width: 80rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content > * {
+    flex: 1 1 50%; /* shrink and grow evenly with 50% each item */
+}
+
+.feature {
+    max-width: 565px;
+    padding: 24px;
+    margin-bottom: 12px;
+    display: flex;
+}
+
+.feature-icon {
+    width: 100px;
+    height: 100px;
+    margin-right: 48px;
+}
+
+@media(max-width: 750px) {
+    h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    p.feature-text {
+        font-size: 16px;
+    }    
+    .container {
+        width: 80vw;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .feature {
+        max-width: 650px;
+        padding: 16px;
+    }
+    .feature-icon {
+        width: 56px;
+        height: 56px;
+        margin-right: 24px;
+    }    
+}
